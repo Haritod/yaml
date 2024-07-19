@@ -9,12 +9,12 @@ pipeline {
         }
         stage('build') {
             steps {
-                docker build -t myimage .
+               sh 'docker build -t myimage .'
             }
         }
         stage('Deploy') {
             steps {
-                docker run -d -p 8090:80 myimage
+               sh 'docker run -d -p 8090:80 myimage'
             }
         }
     }
