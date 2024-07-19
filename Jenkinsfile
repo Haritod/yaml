@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('cloning') {
             steps {
-                git 'https://github.com/Haritod/yaml.git'
+                checkout scm
             }
         }
         stage('build') {
