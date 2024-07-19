@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('cloning') {
             steps {
-                git clone https://github.com/Haritod/yaml.git
+                git 'https://github.com/Haritod/yaml.git'
             }
         }
         stage('build') {
